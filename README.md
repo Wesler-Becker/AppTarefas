@@ -24,5 +24,5 @@ Este é um app Android com Java que demonstra o uso de Firebase In-App Messaging
 ## Como testar
 
 1. Conecte-se ao Firebase
-2. Crie os eventos `tarefa_concluida`, `tarefas_mais_da_metade`, `todas_tarefas_concluidas` no Console Firebase
+2. Crie os eventos `tarefa_concluida`, `tarefas_metade`, `todas_tarefas_concluidas` no Console Firebase
 3. Configure campanhas de In-App Messaging associadas a cada evento
