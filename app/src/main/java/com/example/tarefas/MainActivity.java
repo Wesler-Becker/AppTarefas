@@ -51,17 +51,24 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("FirebaseEvento", "Total concluídas: " + totalConcluidas);
 
+        Bundle params = new Bundle();
+
         if (totalConcluidas == 10 && !enviouTodas) {
-            firebaseAnalytics.logEvent("todas_tarefas_concluidas", null);
-            Log.d("FirebaseEvento", "Evento: todas_tarefas_concluidas");
+            params.putString("status", "todas");
+            firebaseAnalytics.logEvent("tarefas_evento", params);
+            Log.d("FirebaseEvento", "Evento: tarefas_evento - status=todas");
             enviouTodas = true;
+
         } else if (totalConcluidas >= 6 && !enviouMetade) {
-            firebaseAnalytics.logEvent("tarefas_metade", null);
-            Log.d("FirebaseEvento", "Evento: tarefas_metade");
+            params.putString("status", "metade");
+            firebaseAnalytics.logEvent("tarefas_evento", params);
+            Log.d("FirebaseEvento", "Evento: tarefas_evento - status=metade");
             enviouMetade = true;
+
         } else if (totalConcluidas > 0 && !enviouAlguma) {
-            firebaseAnalytics.logEvent("tarefa_concluida", null);
-            Log.d("FirebaseEvento", "Evento: tarefa_concluida");
+            params.putString("status", "alguma");
+            firebaseAnalytics.logEvent("tarefas_evento", params);
+            Log.d("FirebaseEvento", "Evento: tarefas_evento - status=alguma");
             enviouAlguma = true;
         }
     }
