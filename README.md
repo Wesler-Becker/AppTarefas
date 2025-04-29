@@ -39,7 +39,14 @@ Este é um app Android com Java que demonstra o uso de Firebase In-App Messaging
 ## Telas
 
 ![image](https://github.com/user-attachments/assets/18cc0409-9357-428b-ad14-a85842e7623c)
-![Captura de tela 2025-04-29 204707](https://github.com/user-attachments/assets/c8a39c8c-0e4b-47ea-822e-b651c426ec4d)
+
+
+# Dependencias build.gradle
+
+```gradle
+implementation libs.google.firebase.analytics
+implementation libs.firebase.inappmessaging.display
+```
 
 
 ## Como testar
