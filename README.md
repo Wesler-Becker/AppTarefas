@@ -3,11 +3,8 @@ O funcionamento é baseado em gatilhos de eventos. O desenvolvedor configura o a
 
 O ciclo funciona assim:
 - Usuário realiza uma ação dentro do app (por exemplo, marca uma tarefa como concluída).
-
 - O app envia um evento personalizado ao Firebase Analytics.
-
 - No Firebase Console, uma campanha de mensagem é configurada para ser acionada quando o app estiver em primeiro plano e após o envio desse evento.
-
 - Quando as condições são atendidas, a mensagem é exibida ao usuário.
 
 
